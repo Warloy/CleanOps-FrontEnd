@@ -23,9 +23,9 @@
         />
 
         <div class="row no-wrap justify-center">
-          <div class="text-h6 ellipsis">
-             Fulano Detal
-          </div>
+          <q-label class="text-h6" >
+            {{userName}}
+          </q-label>
         </div>
 
         
@@ -63,6 +63,14 @@
                   <q-item-label>Gestionar Areas</q-item-label>
                 </q-item-section>
               </q-item>
+
+              <q-item clickable v-close-popup @click="onItemClick" to="/supervisor/dashboard">
+                <q-item-section 
+                avatar>
+                  <q-icon name="dashboard" />
+                  <q-item-label>Dashboard</q-item-label>
+                </q-item-section>
+              </q-item>
             </q-list>
           </q-btn-dropdown>
         </div>
@@ -76,7 +84,12 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'SupervisorIndex'
+  name: 'SupervisorIndex',
+  data (){
+    return{
+      userName: 'Fulano Detal'
+    }
+  }
 })
 </script>
 

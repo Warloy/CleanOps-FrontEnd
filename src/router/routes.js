@@ -13,6 +13,7 @@ const routes = [
       { path: 'areas', component: () => import('pages/SupervisorAreaManager.vue')},
       { path: 'areas/edit', component: () => import('pages/SupervisorAreaProfile.vue')},
 
+      { path: 'dashboard', component: () => import('pages/SupervisorDashboard.vue')},
     ]
   },
 
