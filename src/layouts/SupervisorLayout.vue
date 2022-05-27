@@ -94,6 +94,18 @@ const linksList = [
     caption: 'Administrar las areas del sistema',
     icon: 'add_home',
     link: '/supervisor/areas'
+  },
+  {
+    title: 'Dashboard',
+    caption: 'Ver datos y estadísticas',
+    icon: 'dashboard',
+    link: '/supervisor/dashboard'
+  },
+  {
+    title: 'Cerrar sesión',
+    caption: 'Salir de la sesión activa',
+    icon: 'logout',
+    link: '/'
   }
 ]
 
