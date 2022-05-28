@@ -4,7 +4,7 @@
      <q-card class="my-card" style="width:fit-content; min-width:600px; max-width: 1200px;">
       <q-section>
         <div class="row justify-center q-pa-sm">
-          <q-text class="text-h4">Modificar usuario</q-text>
+          <q-text class="text-h4">Perfil de usuario</q-text>
         </div>
         <div class="row justify-center q-pa-md">
           <q-img
@@ -164,7 +164,7 @@ import {ref} from 'vue'
 
 export default defineComponent({
   name: 'SupervisorUserProfile',
-  data(){
+  data() {
     return{
       userCedula: '',
       userNombre: '',
@@ -177,7 +177,6 @@ export default defineComponent({
       userDisponible: false,
       userTipo: ref(1)
     }
-
   }
 })
 </script>
