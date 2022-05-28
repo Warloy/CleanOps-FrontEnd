@@ -103,13 +103,13 @@ export default defineComponent({
       area:[
         {
         areaCodigo: 'PC-0010-NA',
-        areaDesc: 'Area donde se le hace mantenimiento a mi pichula.',
-        areaSect: 'Variante. Usualmente en las manos de aquellos que son propicios para la tarea de mantener mi pichula.',
+        areaDesc: 'Baños y zonas adyacentes.',
+        areaSect: 'Sector de comida. Segundo piso.',
         },
         {
         areaCodigo: 'PC-0012-KR',
-        areaDesc: 'Area donde se le hace mantenimiento a la pichula de mis amisios.',
-        areaSect: 'Amisio amisio amisio yea amisio amisio amisio yea',
+        areaDesc: 'Depósito de comida.',
+        areaSect: 'Sector subterráneo, planta B división 4.',
         }
       ]
     }
