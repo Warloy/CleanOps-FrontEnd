@@ -77,7 +77,7 @@
             </div>
             <div class="column col-1 items-center">
               <q-label style="margin-left:auto; margin-right:auto">
-                <q-btn flat color="secondary" icon="edit" to="/supervisor/area/edit"/>
+                <q-btn flat color="secondary" icon="edit" to="/supervisor/areas/edit"/>
               </q-label>
             </div>
             <div class="column col-1 items-center">
