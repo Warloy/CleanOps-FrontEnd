@@ -16,7 +16,7 @@
           dense
           round
           aria-label="Menu"
-          to="/supervisor"
+          to="/supervisor/home"
         >
           <template v-slot:default>
             <q-img
@@ -75,7 +75,7 @@ const linksList = [
     title: 'Página principal',
     caption: 'Volver a la página de inicio',
     icon: 'home',
-    link: '/supervisor'
+    link: '/supervisor/home'
   },
   {
     title: 'Configurar perfil',

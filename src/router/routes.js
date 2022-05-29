@@ -18,7 +18,7 @@ const routes = [
     path: '/supervisor',
     component: () => import('layouts/SupervisorLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/SupervisorIndex.vue') },
+      { path: 'home', component: () => import('pages/SupervisorIndex.vue') },
       { path: 'profile', component: () => import('pages/EditProfile.vue')},
 
       { path: 'users', component: () => import('pages/SupervisorUserManager.vue')},
@@ -33,6 +33,9 @@ const routes = [
 
   // Always leave this as last one,
   // but you can also remove it
+  {
+    path:'/', redirect: '/Login'
+  },
   {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue')

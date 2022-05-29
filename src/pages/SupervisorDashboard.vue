@@ -121,7 +121,7 @@
           <q-card class="q-py-sm q-px-sm" style="margin-left:auto; margin-right:auto; width:80%; min-width:300px; max-width:1400px">
             <div class="row wrap justify-center">
                 <q-label class="text-h6">
-                  Usuarios
+                  Trabajadores
                 </q-label>
             </div>
             <q-separator/>
@@ -141,11 +141,11 @@
                 </q-circular-progress>
             </div>
             <div class="row justify-center">
-              Usuarios en el sistema
+              Trabajadores registrados en el sistema
             </div>
             <q-separator/>
             <div class="row justify-start q-mt-sm">
-              Porcentaje de usuarios con estatus disponible
+              Porcentaje de trabajadores con estatus disponible
             </div>
             <div class="row justify-start">
               <div class="column col-10 q-pr-sm">
@@ -156,7 +156,7 @@
               </div>
             </div> 
             <div class="row justify-start q-mt-sm">
-              Porcentaje de usuarios activos
+              Porcentaje de trabajadores activos
             </div>
             <div class="row justify-start">
               <div class="column col-10 q-pr-sm">
@@ -167,7 +167,7 @@
               </div>
             </div>
             <div class="row justify-start q-mt-sm">
-              Porcentaje de usuarios que se han modificado
+              Porcentaje de operadores de mantenimiento
             </div>
             <div class="row justify-start">
               <div class="column col-10 q-pr-sm">
@@ -263,7 +263,7 @@ export default defineComponent({
       porcIncidencias3: 100,
       porcUsuarios: 33,
       porcUsuarios2: 80,
-      porcUsuarios3: 10,
+      porcUsuarios3: 50,
       porcOrdenes: 20,
       porcOrdenes2: 30,
       porcOrdenes3: 70,

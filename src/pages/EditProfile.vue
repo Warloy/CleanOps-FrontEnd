@@ -75,10 +75,10 @@
       <q-card-section>
         <div class="row justify-end q-py-md">
           <div class="col-md-3">
-            <q-btn class="btn-fixed-width q-px-md" color="secondary" label="Guardar" icon="save" to="/supervisor"/>
+            <q-btn class="btn-fixed-width q-px-md" color="secondary" label="Guardar" icon="save" to="/supervisor/home"/>
           </div>
           <div class="col-md-3">
-            <q-btn class="btn-fixed-width q-px-md" color="secondary" label="Volver" icon="cancel" to="/supervisor"/>
+            <q-btn class="btn-fixed-width q-px-md" color="secondary" label="Volver" icon="cancel" to="/supervisor/home"/>
           </div>
         </div>
       </q-card-section>
