@@ -1,6 +1,20 @@
 
 const routes = [
   {
+    path: '/Login',
+    component: () => import('pages/Login.vue')
+  },
+  {
+    path: '/OperationCheif', name: 'operationcheif',
+    component: () => import('layouts/OperationCheif.vue'),
+    children: [
+      { path: 'Home', name: 'operationchiefindex', component: () => import('pages/OperationCheifIndex.vue') },
+      { path: 'Profile', name: 'profile', component: () => import('pages/EditProfile.vue') },
+      {path: 'OrderManagement', name:'ordermanagement', component:()=>import('pages/OrderManagement.vue')},
+      {path: 'PreventiveManagement', name:'preventivemanagement', component:()=>import('pages/PreventiveManagement.vue')},
+    ]
+  },
+  {
     path: '/supervisor',
     component: () => import('layouts/SupervisorLayout.vue'),
     children: [
