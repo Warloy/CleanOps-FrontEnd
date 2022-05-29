@@ -54,7 +54,7 @@
         </div>
       </div>
 
-      <div class="row wrap q-pa-sm items-center justify-center">
+      <div class="row wrap q-pa-sm justify-center">
         <div class="column col-3">
           <q-card class="q-py-sm q-px-sm" style="margin-left:auto; margin-right:auto; width:80%; min-width:300px; max-width:1400px">
             <div class="row wrap justify-center">
@@ -75,9 +75,46 @@
                     track-color="grey-3"
                     class="q-ma-md"
                   >
-                  {{porcIncidencias}}%
+                  {{cantIncidencias}}
                 </q-circular-progress>
             </div>
+            <div class="row justify-center">
+              Incidencias registradas
+            </div>
+            <q-separator/>
+            <div class="row justify-start q-mt-sm">
+              Porcentaje de incidencias aprobadas
+            </div>
+            <div class="row justify-start">
+              <div class="column col-10 q-pr-sm">
+              <q-linear-progress stripe rounded size="20px" :value="porcIncidencias/100" color="secondary"/>
+              </div>
+              <div class="column col-2">
+                {{porcIncidencias}}%
+              </div>
+            </div> 
+            <div class="row justify-start q-mt-sm">
+              Porcentaje de incidencias por revisar
+            </div>
+            <div class="row justify-start">
+              <div class="column col-10 q-pr-sm">
+              <q-linear-progress stripe rounded size="20px" :value="porcIncidencias2/100" color="secondary"/>
+              </div>
+              <div class="column col-2">
+                {{porcIncidencias2}}%
+              </div>
+            </div>
+            <div class="row justify-start q-mt-sm">
+              Porcentaje de incidencias convertidas en orden
+            </div>
+            <div class="row justify-start">
+              <div class="column col-10 q-pr-sm">
+              <q-linear-progress stripe rounded size="20px" :value="porcIncidencias3/100" color="secondary"/>
+              </div>
+              <div class="column col-2">
+                {{porcIncidencias3}}%
+              </div>
+            </div>  
           </q-card>
         </div>
         <div class="column col-3">
@@ -100,8 +137,45 @@
                     track-color="grey-3"
                     class="q-ma-md"
                   >
-                  {{porcIncidencias}}%
+                  {{cantUsuarios}}
                 </q-circular-progress>
+            </div>
+            <div class="row justify-center">
+              Usuarios en el sistema
+            </div>
+            <q-separator/>
+            <div class="row justify-start q-mt-sm">
+              Porcentaje de usuarios con estatus disponible
+            </div>
+            <div class="row justify-start">
+              <div class="column col-10 q-pr-sm">
+              <q-linear-progress stripe rounded size="20px" :value="porcUsuarios/100" color="secondary"/>
+              </div>
+              <div class="column col-2">
+                {{porcUsuarios}}%
+              </div>
+            </div> 
+            <div class="row justify-start q-mt-sm">
+              Porcentaje de usuarios activos
+            </div>
+            <div class="row justify-start">
+              <div class="column col-10 q-pr-sm">
+              <q-linear-progress stripe rounded size="20px" :value="porcUsuarios2/100" color="secondary"/>
+              </div>
+              <div class="column col-2">
+                {{porcUsuarios2}}%
+              </div>
+            </div>
+            <div class="row justify-start q-mt-sm">
+              Porcentaje de usuarios que se han modificado
+            </div>
+            <div class="row justify-start">
+              <div class="column col-10 q-pr-sm">
+              <q-linear-progress stripe rounded size="20px" :value="porcUsuarios3/100" color="secondary"/>
+              </div>
+              <div class="column col-2">
+                {{porcUsuarios3}}%
+              </div>
             </div>
           </q-card>
         </div>
@@ -109,7 +183,7 @@
           <q-card class="q-py-sm q-px-sm" style="margin-left:auto; margin-right:auto; width:80%; min-width:300px; max-width:1400px">
             <div class="row wrap justify-center">
                 <q-label class="text-h6">
-                  Ordenes
+                  Órdenes
                 </q-label>
             </div>
             <q-separator/>
@@ -125,8 +199,44 @@
                     track-color="grey-3"
                     class="q-ma-md"
                   >
-                  {{porcIncidencias}}%
+                  {{cantOrdenes}}
                 </q-circular-progress>
+            </div>
+            <div class="row justify-center">
+              Órdenes creadas
+            </div>
+            <q-separator/><div class="row justify-start q-mt-sm">
+              Porcentaje de órdenes en curso
+            </div>
+            <div class="row justify-start">
+              <div class="column col-10 q-pr-sm">
+              <q-linear-progress stripe rounded size="20px" :value="porcOrdenes/100" color="secondary"/>
+              </div>
+              <div class="column col-2">
+                {{porcOrdenes}}%
+              </div>
+            </div> 
+            <div class="row justify-start q-mt-sm">
+              Porcentaje de órdenes originarias de una incidencia
+            </div>
+            <div class="row justify-start">
+              <div class="column col-10 q-pr-sm">
+              <q-linear-progress stripe rounded size="20px" :value="porcOrdenes2/100" color="secondary"/>
+              </div>
+              <div class="column col-2">
+                {{porcOrdenes2}}%
+              </div>
+            </div>
+            <div class="row justify-start q-mt-sm">
+              Porcentaje de órdenes creadas por itinerario
+            </div>
+            <div class="row justify-start">
+              <div class="column col-10 q-pr-sm">
+              <q-linear-progress stripe rounded size="20px" :value="porcOrdenes3/100" color="secondary"/>
+              </div>
+              <div class="column col-2">
+                {{porcOrdenes3}}%
+              </div>
             </div>
           </q-card>
         </div>
@@ -145,7 +255,18 @@ export default defineComponent({
     return{
       startdate: '',
       enddate: '',
+      cantIncidencias: 1337,
+      cantUsuarios: 420,
+      cantOrdenes: 6969,
       porcIncidencias: 75,
+      porcIncidencias2: 10,
+      porcIncidencias3: 100,
+      porcUsuarios: 33,
+      porcUsuarios2: 80,
+      porcUsuarios3: 10,
+      porcOrdenes: 20,
+      porcOrdenes2: 30,
+      porcOrdenes3: 70,
       area:[
         {
         areaCodigo: 'PC-0010-NA',
