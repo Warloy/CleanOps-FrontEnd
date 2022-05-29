@@ -18,21 +18,21 @@
       <q-card-section>
         <div class="row wrap justify-around q-py-md">
           <div class="column col-3 q-px-sm">
-            <q-input outlined v-model="Order.orderUserid" label="Código de responsable" style="min-width: 240px;">
+            <q-input outlined v-model="orderUserid" label="Cédula del responsable" style="min-width: 240px;">
               <template v-slot:append>
                 <q-btn flat color="secondary" icon="search"/>
               </template>
             </q-input>
           </div>
           <div class="column col-3 q-px-sm">
-            <q-input outlined v-model="Order.orderAreaid" label="Código de área" style="min-width: 240px;">
+            <q-input outlined v-model="orderAreaid" label="Código de área" style="min-width: 240px;">
               <template v-slot:append>
                 <q-btn flat color="secondary" icon="search"/>
               </template>
             </q-input>
           </div>
           <div class="column col-3 q-px-sm">
-            <q-input outlined v-model="Order.orderIncid" label="Código de incidencia" style="min-width: 240px;">
+            <q-input outlined v-model="orderIncid" label="Código de incidencia" style="min-width: 240px;">
               <template v-slot:append>
                 <q-btn flat color="secondary" icon="search"/>
               </template>
@@ -44,7 +44,7 @@
           <div class="column col-grow" style="max-width:90%">
             <div>
               <q-input
-                v-model="Order.orderTrabajo"
+                v-model="orderTrabajo"
                 label="Descripción del trabajo a realizar"
                 autogrow
                 outlined
@@ -55,11 +55,11 @@
 
         <div class="row justify-evenly q-py-sm">
           <div class="column col-4">
-            <q-input v-model="Order.orderFechaInicio" label="Fecha de inicio" mask="date" :rules="['date']">
+            <q-input v-model="orderFechaInicio" label="Fecha de inicio" mask="date" :rules="['date']">
               <template v-slot:append>
                 <q-icon name="event" class="cursor-pointer">
                   <q-popup-proxy cover transition-show="scale" transition-hide="scale">
-                    <q-date v-model="Order.orderFechaInicio">
+                    <q-date v-model="orderFechaInicio">
                       <div class="row items-center justify-end">
                         <q-btn v-close-popup label="Close" color="primary" flat />
                       </div>
@@ -75,14 +75,14 @@
             </div>
             <div class="row justify-center">
               <q-btn-toggle
-                  v-model="Order.orderEstado"
+                  v-model="orderEstado"
                   push
                   dense
                   unelevated
                   toggle-color="secondary"
                   :options="[
-                    {value: 0, slot: 'one'},
-                    {value: 2, slot: 'two'},
+                    {value: 2, slot: 'one'},
+                    {value: 0, slot: 'two'},
                     {value: 1, slot: 'three'},
                   ]"
                 >
@@ -135,7 +135,7 @@
               Participantes adicionales
               </div>  
               <div class="column col-3 q-px-sm">
-                <q-input outlined v-model="addparticipant" label="Código de operador" style="min-width: 240px;">
+                <q-input outlined v-model="addparticipant" label="Cédula del operador" style="min-width: 240px;">
                 </q-input>
               </div>
               <div class="column col-2 q-px-sm">
@@ -198,25 +198,21 @@ export default defineComponent({
   data(){
     return{
       addparticipant:'',
-      Order:[ {
-        orderUserid: '',
-        orderAreaid: '',
-        orderIncid: '',
-        orderTrabajo: '',
-        orderFechaInicio: '',
-        orderFechaCierre: '',
-        orderEstado: 0,
-      }
-      ],
+      orderUserid: '',
+      orderAreaid: '',
+      orderIncid: '',
+      orderTrabajo: '',
+      orderFechaInicio: '',
+      orderFechaCierre: '',
+      orderEstado: ref(0),
       Participant:[ {
         participantID:'101',
         participantName:'Fulanito',
         participantSurname:'Ejemplificado',
         participantCargo:'Ejemplo',
-      }
+        }
       ]
     }
-
   },
   methods: {
     addNewParticipant() {
@@ -225,7 +221,8 @@ export default defineComponent({
         participantName:'Fulanito',
         participantSurname:'Ejemplificado',
         participantCargo:'Ejemplo',
-      })
+      }),
+      this.addparticipant=''
     },
     deleteParticipant(index) {
       this.Participant.splice(index, 1)
