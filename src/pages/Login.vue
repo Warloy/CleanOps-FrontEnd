@@ -50,7 +50,7 @@
                   'Porfavor ingrese una  contraseña valida.',
                 (val) =>
                   (val.length >= 4 && val.length <= 9) ||
-                  'La contraseña tiene que ser maximo de 4 a 8 caracteres',
+                  'La contraseña debe tener entre 4 y 8 caracteres',
               ]"
               ><template v-slot:prepend>
                 <q-icon
