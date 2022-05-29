@@ -8,9 +8,10 @@ const routes = [
     path: '/OperationCheif', name: 'operationcheif',
     component: () => import('layouts/OperationCheif.vue'),
     children: [
-      { path: 'Home', name: 'operationchiefindex', component: () => import('pages/OperationCheifIndex.vue') },
-      { path: 'Profile', name: 'profile', component: () => import('pages/EditProfile.vue') },
+      {path: 'Home', name: 'operationchiefindex', component: () => import('pages/OperationCheifIndex.vue')},
+      {path: 'Profile', name: 'profile', component: () => import('pages/EditProfile.vue')},
       {path: 'OrderManagement', name:'ordermanagement', component:()=>import('pages/OrderManagement.vue')},
+      {path: 'OrderManagement/Edit', name:'orderedit', component: () => import('pages/OrderEdit.vue')},
       {path: 'PreventiveManagement', name:'preventivemanagement', component:()=>import('pages/PreventiveManagement.vue')},
     ]
   },
