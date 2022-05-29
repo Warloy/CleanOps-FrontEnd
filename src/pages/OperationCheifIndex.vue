@@ -12,7 +12,7 @@
           CleanOps es una herramienta en línea para la gestión de mantenimiento.
         </div>
         <div class="text-body2 text-center">
-          Actualmente te encuentras en el portal del supervisor.
+          Actualmente te encuentras en el portal del jefe de operaciones.
         </div>
         </q-card-section>
       </q-card>
